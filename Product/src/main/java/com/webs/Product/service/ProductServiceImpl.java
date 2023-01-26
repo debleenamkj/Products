@@ -57,6 +57,11 @@ public class ProductServiceImpl implements ProductService{
     }
 
     @Override
+    public List<ProductCategory> getAllProductCategory(){
+        return productCategoryRepository.findAll();
+    }
+
+    @Override
     public ProductOutput getProduct(Long productId) {
         log.debug("Inside ProductServiceImpl - getProduct");
         Product product = productRepository.findById(productId).get();

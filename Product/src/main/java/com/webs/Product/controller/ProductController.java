@@ -24,30 +24,33 @@ public class ProductController {
         this.productService = productService;
     }
     @PostMapping("/saveproduct")
-    public ResponseEntity<?> createProduct(@RequestBody Product product) {
+    public Product createProduct(@RequestBody Product product) {
         log.debug("Inside ProductController - createProduct");
-        productService.createProduct(product);
-        return new ResponseEntity<>("Product Registered", HttpStatus.CREATED);
+        return productService.createProduct(product);
     }
     @PostMapping("/saveproductcategory")
     public ResponseEntity<?> createProductCategory(@RequestBody ProductCategory product) {
         log.debug("Inside ProductController - createProductCategory");
         productService.createProductCategory(product);
-        return new ResponseEntity<>("Product Category Registered", HttpStatus.CREATED);
+        return new ResponseEntity<>("Product Category Created", HttpStatus.CREATED);
     }
 
     @GetMapping("/getproduct/{productId}")
-    public ResponseEntity<?> getProduct(@PathVariable Long productId) {
+    public ProductOutput getProduct(@PathVariable Long productId) {
         log.debug("Inside ProductController - getProduct");
-        ProductOutput productList= productService.getProduct(productId);
-        return new ResponseEntity<>(productList,HttpStatus.OK);
+        return productService.getProduct(productId);
     }
 
     @GetMapping("/getProducts")
-    public ResponseEntity<?> getAllProducts() {
+    public List<ProductOutput> getAllProducts() {
         log.debug("Inside ProductController - getAllProducts");
-        List<ProductOutput> productList = productService.getProducts();
-        return new ResponseEntity<>(productList,HttpStatus.OK);
+        return productService.getProducts();
+    }
+
+    @GetMapping("/getproductcategory")
+    public List<ProductCategory> getAllProductCategory() {
+        log.debug("Inside ProductController - getAllProductCategory");
+        return productService.getAllProductCategory();
     }
 
     @PutMapping("/updateproduct")
