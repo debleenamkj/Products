@@ -32,14 +32,14 @@
  - User can also logout by clicking on the logout icon button present in the top menu then they will get navigated back to the login view.
 
 End Points for Using All the services from the Restful API are:
-Get a Product using ID: http://localhost:8080/api/v1/getproduct/{productId}
-Get all Products: http://localhost:8080/api/v1/getProducts
-Update a Product: http://localhost:8080/api/v1/updateproduct
-Create a Product: http://localhost:8080/api/v1/saveproduct
-Delete a Product: http://localhost:8080/api/v1/deleteproduct/{productId}
-Get All Product Category: http://localhost:8080/api/v1/getproductcategory
-Create a Product Category: http://localhost:8080/api/v1/saveproductcategory
-Delete a Product Category: http://localhost:8080/api/v1/deleteproductcategory/{productCategoryId}
+1. Get a Product using ID: http://localhost:8080/api/v1/getproduct/{productId}
+2. Get all Products: http://localhost:8080/api/v1/getProducts
+3. Update a Product: http://localhost:8080/api/v1/updateproduct
+4. Create a Product: http://localhost:8080/api/v1/saveproduct
+5. Delete a Product: http://localhost:8080/api/v1/deleteproduct/{productId}
+6. Get All Product Category: http://localhost:8080/api/v1/getproductcategory
+7. Create a Product Category: http://localhost:8080/api/v1/saveproductcategory
+8. Delete a Product Category: http://localhost:8080/api/v1/deleteproductcategory/{productCategoryId}
 
 This project also includes JUnit Testing in each layer i.e. Repository, Service and Controller layer of Springboot.
 
