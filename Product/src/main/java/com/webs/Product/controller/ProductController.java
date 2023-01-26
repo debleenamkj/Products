@@ -28,14 +28,14 @@ public class ProductController {
         productService.createProduct(product);
         return new ResponseEntity<>("Product Registered", HttpStatus.CREATED);
     }
-    @PostMapping("/saveproductcat")
+    @PostMapping("/saveproductcategory")
     public ResponseEntity<?> createProductCategory(@RequestBody ProductCategory product) {
         log.debug("Inside ProductController - createProductCategory");
         productService.createProductCategory(product);
         return new ResponseEntity<>("Customer Registered", HttpStatus.CREATED);
     }
 
-    @GetMapping("/{productId}")
+    @GetMapping("/getproduct/{productId}")
     public ResponseEntity<?> getProduct(@PathVariable Long productId) {
         log.debug("Inside ProductController - getProduct");
         ProductOutput productList= productService.getProduct(productId);
