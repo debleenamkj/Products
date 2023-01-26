@@ -15,6 +15,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/v1")
 @Slf4j
+@CrossOrigin
 public class ProductController {
     private ProductServiceImpl productService;
     @Autowired
@@ -32,7 +33,7 @@ public class ProductController {
     public ResponseEntity<?> createProductCategory(@RequestBody ProductCategory product) {
         log.debug("Inside ProductController - createProductCategory");
         productService.createProductCategory(product);
-        return new ResponseEntity<>("Customer Registered", HttpStatus.CREATED);
+        return new ResponseEntity<>("Product Category Registered", HttpStatus.CREATED);
     }
 
     @GetMapping("/getproduct/{productId}")
