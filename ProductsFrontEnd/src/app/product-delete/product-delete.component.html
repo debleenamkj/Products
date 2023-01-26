@@ -1,0 +1,10 @@
+<div style="display: flex;flex-direction: column; justify-content: center; width: 40%; padding: 5%; margin: auto;   ">
+    <h2 style="text-align: center; margin-bottom: 10%;">Delete Product</h2>
+    <mat-form-field appearance="legacy" style="text-align: center;">
+    <mat-label>Enter a ProductId to Delete</mat-label>
+    <input matInput type="text" [(ngModel)] = "productId">
+</mat-form-field>
+<div style="display: flex;gap: 3.5vw;justify-content: center;align-items: center;margin-top: 20px;">
+    <button mat-stroked-button (click)="delete()" color="primary">Delete</button>
+</div>
+</div>

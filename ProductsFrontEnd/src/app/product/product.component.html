@@ -1,0 +1,11 @@
+<mat-drawer-container class="example-container" style="height: 100%;">
+    <mat-drawer mode="side" opened style="padding-right: 5%; padding-top: 2%; padding-left: 1%;">
+        <h2 style="margin-top: 5%;"><a routerLink="/product/add" routerLinkActive="active" style="text-decoration: none; color: white;">Add</a></h2>
+        <h2><a routerLink="/product/view" routerLinkActive="active" style="text-decoration: none; color: white;">View All Product</a></h2>
+        <h2><a routerLink="/product/delete" routerLinkActive="active" style="text-decoration: none; color: white;">Delete</a></h2>
+    </mat-drawer>
+    <mat-drawer-content>
+            <mat-toolbar color = "primary"><span style="margin-left: 2%;">Products</span><span><button mat-icon-button (click)="logout()"><mat-icon>exit_to_app</mat-icon></button></span></mat-toolbar>
+            <router-outlet></router-outlet>
+    </mat-drawer-content>
+  </mat-drawer-container>

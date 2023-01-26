@@ -1,0 +1,22 @@
+<mat-drawer-container class="example-container" style="height: 100%; text-align: center;justify-content: center;">
+    <mat-drawer-content>
+<div [formGroup]="Login" style="display: flex;flex-direction: column; justify-content: center;width: 40%; padding: 5%;">
+    <mat-toolbar style="background-color: rgb(255, 166, 0);"><span style="margin-left: 2%;">Login</span></mat-toolbar>
+    <mat-form-field appearance="legacy">
+        <mat-label>Email</mat-label>
+        <input matInput formControlName="emailid" type="text">
+    </mat-form-field>
+    <mat-form-field appearance="legacy">
+        <mat-label>Password</mat-label>
+        <input matInput formControlName="password" type="password">
+    </mat-form-field>
+    <small style="color: red;">{{message}}</small>
+    <div style="display: flex;gap: 3.5vw;justify-content: center;align-items: center;margin-top: 20px;">
+        <button mat-stroked-button (click)="login()" [disabled]="!Login.valid" color="primary">Login</button>
+    </div>
+</div>
+
+    
+    <router-outlet></router-outlet>
+</mat-drawer-content>
+</mat-drawer-container>

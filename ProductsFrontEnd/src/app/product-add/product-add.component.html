@@ -1,0 +1,26 @@
+<div [formGroup]="Products" style="display: flex;flex-direction: column; justify-content: center;width: 40%; padding: 5%; margin: auto;">
+    <h2 style="text-align: center;">Add Product</h2>
+    <mat-form-field appearance="legacy">
+        <mat-label>Product Id</mat-label>
+        <input matInput type="text" formControlName="productId">
+    </mat-form-field>
+    <mat-form-field appearance="legacy">
+        <mat-label>Product Name</mat-label>
+        <input matInput type="text" formControlName="name">
+    </mat-form-field>
+    <mat-form-field appearance="legacy">
+        <mat-label>Product Type</mat-label>
+        <input matInput type="text" formControlName="productType">
+    </mat-form-field>
+    <mat-form-field appearance="legacy">
+        <mat-label>Product Category</mat-label>
+        <input matInput type="text" formControlName="productCategory">
+    </mat-form-field>
+    <mat-form-field appearance="legacy">
+        <mat-label>Product Price</mat-label>
+        <input matInput type="text" formControlName="productPrice">
+    </mat-form-field>
+    <div style="display: flex;gap: 3.5vw;justify-content: center;align-items: center;margin-top: 20px;">
+        <button mat-stroked-button (click)="add()" color="primary">Add</button>
+    </div>
+</div>
