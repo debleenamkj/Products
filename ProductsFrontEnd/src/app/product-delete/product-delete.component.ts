@@ -13,11 +13,19 @@ export class ProductDeleteComponent implements OnInit {
   constructor(private service:ProductServiceService, private router:Router) { }
 
   delete(){
-    this.service.deleteProduct(this.productId).subscribe((data)=>console.log(data)
+    this.service.deleteProduct(this.productId).subscribe((data)=>{
+      this.router.navigate(['/product/view']);
+    }
     );
   }
 
+  id:any="Select ID";
+  myID:any[] = [];
   ngOnInit(): void {
+    this.service.getProducts().subscribe((data)=>{
+      this.myID = data; 
+      console.log(this.myID);      
+    })
   }
 
 }

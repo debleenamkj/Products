@@ -34,7 +34,7 @@ export class ProductAddComponent implements OnInit {
     console.log(this.Products.get('name')?.value);
     this.products.productId = this.Products.get('productId')?.value;
     this.products.name = this.Products.get('name')?.value;
-    this.products.productCategory = this.Products.get('productCategory')?.value;
+    this.products.productCategory = this.cate;
     this.products.productType = this.Products.get('productType')?.value;
     this.products.productPrice = this.Products.get('productPrice')?.value;
     
@@ -52,7 +52,13 @@ export class ProductAddComponent implements OnInit {
     console.log(this.products);
   }
 
+  cate:any="";
+  myCategory:any[] = [];
   ngOnInit(): void {
+    this.service.getProductCategory().subscribe((data)=>{
+      this.myCategory = data; 
+      console.log(this.myCategory);      
+    })
   }
 
 }

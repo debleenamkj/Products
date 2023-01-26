@@ -21,5 +21,9 @@ export class ProductServiceService {
     return this.http.get("http://localhost:8080/api/v1/getProducts");
    }
 
+   public getProductCategory():Observable<any>{
+    return this.http.get("http://localhost:8080/api/v1/getproductcategory");
+   }
+
   constructor(private http:HttpClient) { }
 }
